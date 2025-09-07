@@ -1,0 +1,24 @@
+FILE := main
+OUT  := build
+
+.PHONY: pdf
+pdf:
+	@echo "Creating build directory..."
+	@mkdir -p $(OUT)
+	@echo "First pass: pdflatex..."
+	pdflatex -output-directory=$(OUT) $(FILE)
+	@echo "Running biber for bibliography..."
+	biber $(OUT)/$(FILE)
+	@echo "Second pass: pdflatex..."
+	pdflatex -output-directory=$(OUT) $(FILE)
+	@echo "Third pass: pdflatex (for cross-references)..."
+	pdflatex -output-directory=$(OUT) $(FILE)
+	@echo "PDF generated in $(OUT)/$(FILE).pdf"
+
+.PHONY: clean
+clean:
+	rm -rf $(filter-out $(OUT)/$(FILE).pdf, $(wildcard $(OUT)/*))
+
+.PHONY: purge
+purge:
+	rm -rf $(OUT)

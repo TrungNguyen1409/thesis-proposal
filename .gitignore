@@ -1,0 +1,74 @@
+# LaTeX build directory
+/build/*
+!/build/main.pdf
+
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.toc
+*.synctex.gz
+*.synctex(busy)
+*.pdfsync
+*.nav
+*.snm
+*.vrb
+*.tdo
+*.toc
+*.lol
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.loa
+*.lol
+*.maf
+*.mtc
+*.mtc0
+*.slf
+*.slt
+*.stc
+
+# LaTeX intermediate files
+*.dvi
+*.ps
+*.eps
+*.figlist
+*.makefile
+*.fls
+*.fdb_latexmk
+
+# Logos (if they contain PDFs)
+/logos/*.pdf
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+*~
+*.swp
+*.swo
+*.tmp
+.vscode/
+.idea/
+
+# Backup files
+*.bak
+*.backup
