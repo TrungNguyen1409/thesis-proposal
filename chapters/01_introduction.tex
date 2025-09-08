@@ -3,88 +3,31 @@
 
 \chapter{Introduction}\label{chapter:introduction}
 
-\section{Section}
-Citation test~\parencite{latex}.
+\section{Context and Motivation}
 
-\subsection{Subsection}
+Contract Lifecycle Management (CLM) is critical in project-based industries such as construction, energy, and telecommunications. In these sectors, contracts serve not merely as legal documents but as operational and financial anchors that govern complex, long-term projects involving multiple stakeholders, regulatory requirements, and dynamic risk factors.
 
-See~\autoref{tab:sample}, \autoref{fig:sample-drawing}, \autoref{fig:sample-plot}, \autoref{fig:sample-listing}.
+Current CLM tools predominantly rely on rule-based automation or single-agent Large Language Models (LLMs), which present significant limitations in scalability, explainability, and domain-specific optimization. These approaches struggle to handle the complexity of enterprise workflows that require specialized task decomposition, collaborative decision-making, and transparent reasoning processes.
 
-\begin{table}[htpb]
-  \caption[Example table]{An example for a simple table.}\label{tab:sample}
-  \centering
-  \begin{tabular}{l l l l}
-    \toprule
-      A & B & C & D \\
-    \midrule
-      1 & 2 & 1 & 2 \\
-      2 & 3 & 2 & 3 \\
-    \bottomrule
-  \end{tabular}
-\end{table}
+Multi-agent systems (MAS) offer promising potential for addressing these limitations through specialized task decomposition, inter-agent collaboration, and enhanced explainability mechanisms. The distributed nature of MAS aligns well with the inherently collaborative and multi-stakeholder environment of contract management processes.
 
-\begin{figure}[htpb]
-  \centering
-  % This should probably go into a file in figures/
-  \begin{tikzpicture}[node distance=3cm]
-    \node (R0) {$R_1$};
-    \node (R1) [right of=R0] {$R_2$};
-    \node (R2) [below of=R1] {$R_4$};
-    \node (R3) [below of=R0] {$R_3$};
-    \node (R4) [right of=R1] {$R_5$};
+\section{Research Relevance}
 
-    \path[every node]
-      (R0) edge (R1)
-      (R0) edge (R3)
-      (R3) edge (R2)
-      (R2) edge (R1)
-      (R1) edge (R4);
-  \end{tikzpicture}
-  \caption[Example drawing]{An example for a simple drawing.}\label{fig:sample-drawing}
-\end{figure}
+This research addresses both academic and practical needs:
 
-\begin{figure}[htpb]
-  \centering
+\textbf{Academic Relevance:} The work fills a research gap on multi-agent system applications in enterprise workflows within regulated environments. While MAS have been extensively studied in domains such as robotics and conversational AI, their application to enterprise contract management remains underexplored, particularly regarding compliance-aware orchestration and explainability requirements.
 
-  \pgfplotstableset{col sep=&, row sep=\\}
-  % This should probably go into a file in data/
-  \pgfplotstableread{
-    a & b    \\
-    1 & 1000 \\
-    2 & 1500 \\
-    3 & 1600 \\
-  }\exampleA
-  \pgfplotstableread{
-    a & b    \\
-    1 & 1200 \\
-    2 & 800 \\
-    3 & 1400 \\
-  }\exampleB
-  % This should probably go into a file in figures/
-  \begin{tikzpicture}
-    \begin{axis}[
-        ymin=0,
-        legend style={legend pos=south east},
-        grid,
-        thick,
-        ylabel=Y,
-        xlabel=X
-      ]
-      \addplot table[x=a, y=b]{\exampleA};
-      \addlegendentry{Example A};
-      \addplot table[x=a, y=b]{\exampleB};
-      \addlegendentry{Example B};
-    \end{axis}
-  \end{tikzpicture}
-  \caption[Example plot]{An example for a simple plot.}\label{fig:sample-plot}
-\end{figure}
+\textbf{Practical Relevance:} The research contributes directly to the development of next-generation CLM platforms. By focusing on methodology and evaluation rather than proprietary implementation details, this work provides valuable insights for the broader enterprise software community while maintaining discretion regarding sensitive commercial aspects.
 
-\begin{figure}[htpb]
-  \centering
-  \begin{tabular}{c}
-  \begin{lstlisting}[language=SQL]
-    SELECT * FROM tbl WHERE tbl.str = "str"
-  \end{lstlisting}
-  \end{tabular}
-  \caption[Example listing]{An example for a source code listing.}\label{fig:sample-listing}
-\end{figure}
+\section{Scope and Limitations}
+
+This thesis focuses on the design and evaluation of multi-agentic AI systems specifically for contract lifecycle management tasks. The scope encompasses:
+
+\begin{itemize}
+    \item System architecture design for MAS-based CLM workflows
+    \item Orchestration and collaboration strategies for enterprise environments
+    \item Comparative evaluation against single-agent baselines
+    \item User trust and explainability assessment
+\end{itemize}
+
+The research maintains discretion regarding proprietary implementation details while providing generalizable frameworks and methodologies applicable to the broader enterprise AI domain.
