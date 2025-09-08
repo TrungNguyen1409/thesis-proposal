@@ -1,8 +1,7 @@
 \RequirePackage[l2tabu,orthodox]{nag}
 
-% TODO: decide if one-sided/two-sided
-%\documentclass[headsepline,footsepline,footinclude=false,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc,BCOR=12mm,DIV=12]{scrbook} % two-sided
-\documentclass[headsepline,footsepline,footinclude=false,oneside,fontsize=11pt,paper=a4,listof=totoc,bibliography=totoc]{scrbook} % one-sided
+% Optimized for 4-page thesis proposal
+\documentclass[headsepline,footsepline,footinclude=false,oneside,fontsize=10pt,paper=a4,listof=totoc,bibliography=totoc,DIV=10]{scrbook} % one-sided, smaller font and margins for compact layout
 
 % TODO: change citation style in settings
 \input{settings}
@@ -10,13 +9,13 @@
 % Thesis information
 \newcommand*{\getUniversity}{Technische Universität München}
 \newcommand*{\getFaculty}{Department of Informatics}
-\newcommand*{\getTitle}{Design and Evaluation of Multi-Agentic AI Systems for Contract Lifecycle Management in B2B SaaS Platforms}
-\newcommand*{\getTitleGer}{Design und Evaluierung von Multi-Agenten KI-Systemen für Contract Lifecycle Management in B2B SaaS Plattformen}
+\newcommand*{\getTitle}{Thesis Proposal}
+\newcommand*{\getTitleGer}{Thesis Proposal}
 \newcommand*{\getAuthor}{Trung Nguyen}
 \newcommand*{\getDoctype}{Master's Thesis in Informatics}
 \newcommand*{\getSupervisor}{Prof. Dr. [Supervisor Name]}
 \newcommand*{\getAdvisor}{[Advisor Name]}
-\newcommand*{\getSubmissionDate}{[Submission Date]}
+\newcommand*{\getSubmissionDate}{\today}
 \newcommand*{\getSubmissionLocation}{Munich}
 
 \begin{document}
@@ -30,27 +29,25 @@
 
 \input{pages/title}
 \input{pages/disclaimer}
-\input{pages/acknowledgments}
-\input{pages/abstract}
-\microtypesetup{protrusion=false}
-\tableofcontents{}
-\microtypesetup{protrusion=true}
 
 \mainmatter{}
 
+% Page 1: Introduction and Problem Statement
 \input{chapters/01_introduction}
 \input{chapters/02_problem_statement}
+
+% Page 2: Research Questions and Methodology
 \input{chapters/03_research_questions}
 \input{chapters/04_methodology}
+
+% Page 3: Starting Literature and Schedule
+\input{chapters/07_starting_literature}
+\input{chapters/08_schedule_october}
+
+% Page 4: Expected Contributions and Proposed Titles
 \input{chapters/05_expected_contributions}
-\input{chapters/06_schedule}
+\input{chapters/09_proposed_titles}
 
-\appendix{}
-
-\microtypesetup{protrusion=false}
-\listoffigures{}
-\listoftables{}
-\microtypesetup{protrusion=true}
 \printbibliography{}
 
 \end{document}
