@@ -2,14 +2,13 @@
 
 \section{Methodology}\label{section:methodology}
 
-\textbf{Literature Review:} Comprehensive review covering multi-agent orchestration frameworks, AI applications in legal technology and contract management, and compliance-aware explainable AI frameworks.
+\textbf{Foundation Framework Design}
+Based on industry foundation papers (e.g., Wooldridge's MAS principles, enterprise AI frameworks), design a focused multi-agent architecture for contract analysis. Define agent roles: Contract Analyzer Agent (extraction, classification), Compliance Checker Agent (regulatory validation), and Orchestrator Agent (task coordination).
 
-\textbf{Prototype Development:} Functional MAS-based CLM prototype implementing specialized agents for different CLM tasks (drafting, analysis, compliance), centralized orchestration mechanisms, communication protocols, and enterprise integration interfaces. Core functionality includes drafting assistance, clause classification, compliance checks, and explainability features.
+\textbf{Prototype Implementation}
+Develop a working prototype implementing the designed framework. Core components: (1) Agent communication protocols using message passing, (2) Contract processing pipeline with NLP integration, (3) Basic explainability features (decision reasoning, confidence scores), (4) Simple web interface for testing.
 
-\textbf{Evaluation Framework:} Multi-dimensional assessment using quantitative metrics (task completion time, accuracy, compliance adherence, system performance) and qualitative metrics (explainability evaluation, usability studies, trust assessment, acceptance measurement).
+\textbf{Evaluation and Validation}
+Conduct comparative evaluation using real contract datasets. Metrics: (1) Processing accuracy (precision, recall for contract analysis tasks), (2) Performance comparison (multi-agent vs single-agent processing time), (3) User trust assessment through explainability features, (4) System reliability and error handling.
 
-\textbf{Comparative Analysis:} Systematic comparison between single-agent and multi-agent approaches, using traditional rule-based CLM systems, single-agent LLM approaches, and hybrid systems across various contract types, complexity levels, and user expertise patterns.
-
-\textbf{User Study Validation:} Industry professional study involving contract managers, legal professionals, and IT professionals, utilizing task-based evaluation scenarios, think-aloud protocols, post-task questionnaires, and comparative preference studies.
-
-\textbf{Data Collection and Analysis:} Data collection from system performance logs, user interactions, expert interviews, and benchmark datasets, with analysis using statistical methods for quantitative data and qualitative content analysis for user feedback.
+\textbf{Implementation Approach:} Rapid prototyping using Python with existing NLP libraries (spaCy, transformers), agent framework (asyncio for concurrent processing), and evaluation using standard contract analysis benchmarks.
