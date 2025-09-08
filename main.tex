@@ -20,33 +20,26 @@
 
 \begin{document}
 
-% Set page numbering to avoid "destination with the same identifier has been already used" warning for cover page.
-% (see https://en.wikibooks.org/wiki/LaTeX/Hyperlinks#Problems_with_Links_and_Pages).
-\pagenumbering{alph}
+% Cover page without page number
 \input{pages/cover}
 
-\frontmatter{}
-
+% Title and disclaimer pages without page numbers
 \input{pages/title}
 \input{pages/disclaimer}
 
-\mainmatter{}
+% Start main content without page numbers
+\clearpage
+\pagestyle{empty}
 
-% Page 1: Introduction and Problem Statement
-\input{chapters/01_introduction}
-\input{chapters/02_problem_statement}
-
-% Page 2: Research Questions and Methodology
-\input{chapters/03_research_questions}
-\input{chapters/04_methodology}
-
-% Page 3: Starting Literature and Schedule
-\input{chapters/07_starting_literature}
-\input{chapters/08_schedule_october}
-
-% Page 4: Expected Contributions and Proposed Titles
-\input{chapters/05_expected_contributions}
-\input{chapters/09_proposed_titles}
+% Continuous content without page breaks
+\input{chapters/1_introduction}
+\input{chapters/2_problem_statement}
+\input{chapters/3_research_questions}
+\input{chapters/4_methodology}
+\input{chapters/5_starting_literature}
+\input{chapters/6_schedule_october}
+\input{chapters/7_expected_contributions}
+\input{chapters/8_proposed_titles}
 
 \printbibliography{}
 
