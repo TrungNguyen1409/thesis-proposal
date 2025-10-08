@@ -2,16 +2,27 @@
 
 \section{Methodology}\label{section:methodology}
 
-\textbf{Foundation Framework Design}
-Based on industry foundation papers (e.g., Wooldridge's MAS principles, enterprise AI frameworks), design a focused multi-agent architecture for contract analysis. Define agent roles: Contract Analyzer Agent (extraction, classification), Compliance Checker Agent (regulatory validation), and Orchestrator Agent (task coordination).
+
+\textbf{Foundation Framework Design}  
+Grounded in domain expertise from enterprise and construction contract management, this research identifies four key agent roles that address practical challenges in Contract Lifecycle Management (CLM):  
+(1) \textit{Risk Analysis Agent} – detects red-flag clauses, liability gaps, and unbalanced terms during contract drafting;  
+(2) \textit{Clause Alignment Agent} – ensures consistency across interrelated project contracts by recommending standardized or back-to-back clauses from the clause library;  
+(3) \textit{Obligation Tracking Agent} – monitors post-signature obligations and deadlines across stakeholders to improve compliance; and  
+(4) \textit{Dependency Graph Agent} (forward-looking) – maintains a dynamic representation of clause and obligation relationships across multiple contracts.  
+These roles were derived through consultation with domain experts and analysis of current CLM pain points in large construction projects.  
+The multi-agent architecture will be designed following established MAS principles (e.g., Wooldridge's frameworks) and enterprise AI orchestration patterns, focusing on modularity, explainability, and compliance awareness.
 \newline
 \break
-\textbf{Prototype Implementation}
-Develop a working prototype implementing the designed framework. Core components: (1) Agent communication protocols using message passing, (2) Contract processing pipeline with NLP integration, (3) Basic explainability features (decision reasoning, confidence scores), (4) Simple web interface for testing.
+\textbf{Prototype Implementation}  
+A working prototype will operationalize the designed architecture using modern agentic AI frameworks. Core components include:  
+(1) Inter-agent communication and orchestration implemented through \textit{LangGraph}, enabling concurrent, event-driven collaboration among specialized agents;  
+(2) A contract processing pipeline leveraging \textit{AWS Textract and custom OCR pipeline} for document parsing, clause extraction, and retrieval-augmented reasoning using vector embeddings stored in \textit{Supabase's vector database};  
+(3) Built-in explainability and observability through \textit{LangFuse}, providing detailed reasoning traces, confidence scores, and user-level audit logs; and  
+(4) A lightweight web interface for interactive testing of agent behavior and real-time contract analysis scenarios.  
+The prototype will be developed in Python, integrating existing LLM APIs (e.g., GPT-4 or similar models) for natural language understanding and leveraging asynchronous orchestration within the LangGraph framework to simulate enterprise-grade agent workflows.
 \newline
 \break
 \textbf{Evaluation and Validation}
-Conduct comparative evaluation using real contract datasets. Metrics: (1) Processing accuracy (precision, recall for contract analysis tasks), (2) Performance comparison (multi-agent vs single-agent processing time), (3) User trust assessment through explainability features, (4) System reliability and error handling.
+Conduct comparative evaluation using real contract datasets. Metrics: (1) Processing accuracy (precision, recall for contract analysis tasks), (2) Performance comparison (multi-agent vs single-agent processing time), (3) User trust assessment through explainability features, (4) System reliability and error handling, and (5) Ablation analysis to systematically remove components and validate design choices for explainability.
 \newline
 \break
-\textbf{Implementation Approach:} Rapid prototyping using Python with existing NLP libraries (spaCy, transformers), agent framework (asyncio for concurrent processing), and evaluation using standard contract analysis benchmarks.
