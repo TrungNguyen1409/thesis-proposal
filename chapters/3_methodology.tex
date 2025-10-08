@@ -23,6 +23,10 @@ The prototype will be developed in Python, integrating existing LLM APIs (e.g., 
 \newline
 \break
 \textbf{Evaluation and Validation}
-Conduct comparative evaluation using real contract datasets. Metrics: (1) Processing accuracy (precision, recall for contract analysis tasks), (2) Performance comparison (multi-agent vs single-agent processing time), (3) User trust assessment through explainability features, (4) System reliability and error handling, and (5) Ablation analysis to systematically remove components and validate design choices for explainability.
-\newline
-\break
+The evaluation will assess the proposed multi-agent framework across three dimensions:
+
+\begin{enumerate}
+    \item \textbf{Efficiency and Accuracy} – Comparative study against single-agent LLM baseline using precision, recall, and F1 metrics for risk detection, and overall processing time for efficiency measurement
+    \item \textbf{Consistency and Compliance} – Testing how well the system maintains consistency across related contracts and accurately tracks obligations and deadlines
+    \item \textbf{Explainability and Trust} – Qualitative assessment using reasoning-trace coverage, auditability through LangFuse logs, and expert Likert-scale ratings of clarity and reliability
+\end{enumerate}
