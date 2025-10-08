@@ -1,6 +1,6 @@
 % !TeX root = ../main.tex
 
-\section{Schedule}\label{section:schedule}
+\section{Timeline \& Risks}\label{section:schedule}
 
 The research project spans from October 2025 to March 2026, structured into three phases with dedicated time for thesis writing.
 
@@ -35,4 +35,22 @@ The research project spans from October 2025 to March 2026, structured into thre
     \item \textbf{November 2025:} Framework design complete, agent roles defined
     \item \textbf{January 2026:} Working prototype with core functionality achieved
     \item \textbf{March 2026:} Evaluation complete, thesis writing finished
+\end{itemize}
+
+\subsection{Technical Risks and Mitigation}
+
+\textbf{Key Technical Risks:}
+\begin{itemize}
+    \item \textbf{Agent Coordination} – Communication overhead between agents reducing system efficiency
+    \item \textbf{Framework Integration} – Challenges integrating LangGraph, LangChain, and Supabase
+    \item \textbf{Data Quality} – Limited access to high-quality contract datasets for training and evaluation
+    \item \textbf{Evaluation Validity} – Risk of poor evaluation results due to insufficient or low-quality testing data
+\end{itemize}
+
+\textbf{Mitigation Strategies:}
+\begin{itemize}
+    \item \textbf{Modular Architecture} – Implement configurable agent communication protocols for easy adjustment
+    \item \textbf{Incremental Development} – Build and test components individually before full integration
+    \item \textbf{Dataset Preparation} – Use CUAD dataset and synthetic data generation if needed
+    \item \textbf{Evaluation Planning} – Design evaluation framework early and validate data quality before testing
 \end{itemize}
